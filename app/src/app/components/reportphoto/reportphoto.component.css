@@ -1,0 +1,36 @@
+.reporte{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.reporte h1{
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto;
+    background: var(--violeta);
+    color: var(--blanco);
+    padding: 1rem 0px;
+}
+.reporte button{
+    margin: 1rem;
+    padding: 1rem;
+    bottom: 0px;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    height: max-content;
+    display: table;
+    background: var(--azul);
+    color: var(--blanco);
+    border-radius: 10px;
+}
+.reporte button:hover{
+    filter: brightness(1.5);
+}
+.reporte button:active{
+    color: var(--azul);
+    background: var(--blanco);
+}
+.reporte img{
+    margin: 2rem auto;
+}

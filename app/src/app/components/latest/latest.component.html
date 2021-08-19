@@ -1,0 +1,36 @@
+<br>
+<!--Primera caja-->
+<div class="cuerpo">
+    <div class="texto">
+        <h1 *ngIf="this.errorlatest">
+            NO REPORT YET
+        </h1>
+        <h4> Latest Report</h4>
+        <h1><strong>{{this.Noticia.Title}}</strong></h1>
+        <h3>{{this.Noticia.Subtitle}}</h3>
+        <hr>
+        <p>{{this.Noticia.report}}</p>
+        <button routerLink={{this.id_latest}} ><span>read more</span><span class="material-icons">play_arrow</span></button>
+    </div>
+    <div class="mapa">
+        <div class="imagen">
+
+            <img src={{this.Noticia.fotoport}}  alt="">
+        </div>
+        
+        <div class="desliza">
+            <li class="prim" *ngFor="let noti of noticiasportadas">
+                 <div class="raro" *ngIf="noticiasportadas.indexOf(noti)==0">
+                    <h6 class="parrafo">{{noti.subtitulo}}</h6> 
+                    <h6 class="fecha">{{noti.date}}</h6>
+                 </div> 
+
+                 <div  *ngIf="noticiasportadas.indexOf(noti)!=0">
+                    <h6 class="parrafo">{{noti.subtitulo}}</h6> 
+                    <h6 class="fecha">{{noti.date}}</h6>
+                 </div> 
+            </li>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div *ngIf="estado==false;">
+    <app-navbar></app-navbar>
+  </div>
+  <div *ngIf="estado==true;">
+    <app-navbar-reg></app-navbar-reg>
+  </div>
+  <div class="cuadro">
+    <div class="mitad1">
+        <h1><strong>Literacy</strong> </h1>
+    </div>
+    <div class="mitad2">
+        <img src="../../../assets/ICON LITERACY.png" alt="">
+    </div>
+    
+</div>
+<div class="cuadro1">
+    <div class="part4">
+    </div>
+    <div class="part2"></div>
+</div>
+
+
+<div class="pdfs">
+    <li class="pdf" *ngFor="let noti of todaslasnews">
+        <div class="prim" ><i><span class="material-icons">play_arrow</span></i></div>
+        <div class="seg"  *ngIf="todaslasnews.indexOf(noti)==0" ><a class="raro" routerLink={{noti.subtitulo}}><h3>{{noti.titulo}}</h3></a></div>
+        <div class="seg"  *ngIf="todaslasnews.indexOf(noti)!=0" ><a routerLink={{noti.subtitulo}}><h3>{{noti.titulo}}</h3></a></div>
+    </li>
+</div>
+
+<app-footer></app-footer>

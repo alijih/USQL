@@ -1,0 +1,47 @@
+.reporte1{
+    width: 80%;
+    margin: auto;
+}
+.reporte1 h1{
+    margin: 1rem auto;
+    color: var(--azul);
+    padding: 1rem .5rem;
+}
+.reporte1 div{
+    font-size: 1.5rem;
+}
+.reporte1 .img{
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+.reporte1 hr{
+    color: var(--violeta);
+    font-weight: bold;
+}
+.reporte1 button{
+    margin: 1rem;
+    padding: 1rem;
+    bottom: 0px;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    height: max-content;
+    display: table;
+    background: var(--azul);
+    color: var(--blanco);
+    border-radius: 10px;
+}
+.reporte1 button:hover{
+    filter: brightness(1.5);
+}
+.reporte1 h3{
+    color: var(--violeta);
+    width: 100%;
+    text-align: center;
+}
+.reporte1 button:active{
+    color: var(--azul);
+    background: var(--blanco);
+}

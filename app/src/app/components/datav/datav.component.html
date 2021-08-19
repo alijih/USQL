@@ -1,0 +1,81 @@
+<div *ngIf="estado==false;">
+  <app-navbar></app-navbar>
+</div>
+<div *ngIf="estado==true;">
+  <app-navbar-reg></app-navbar-reg>
+</div>
+<div class="cuadro">
+  <div class="mitad1">
+      <h1><strong> Data Visuals</strong></h1>
+  </div>
+  <div class="mitad2">
+      <img src="../../../assets/DATAVISUAL.png" alt="">
+  </div>
+  
+</div>
+<div class="cuadro1">
+  <div class="part1">
+      <h2>Images</h2>
+  </div>
+  <div class="part2"></div>
+</div>
+
+
+
+<!-- carousel imagenes -->
+<div class="carusel">
+    <div class="carousel__contenedor">
+        <button class="carousel__anterior" aria-label="Previous slide"><span class="material-icons">
+            arrow_back_ios
+            </span></button>
+            <div class="carousel__lista" >
+                <div *ngFor="let foto of Fotos">
+                    <div class="carousel__element" >
+                            <img src={{foto.url}} alt="">
+                            <figcaption><a routerLink={{foto.direccion}}><strong> {{foto.titulo}}</strong></a></figcaption> 
+                    </div>
+                </div>
+            </div>
+           <button class="carousel__siguiente" aria-label="Next slide"> <span class="material-icons">
+            arrow_forward_ios
+            </span></button>
+    </div>
+</div>
+
+
+<br>
+
+
+ 
+<div class="cuadro2">
+  <div class="part2">
+  </div>
+  <div class="part3">
+      <h2>Videos</h2>
+  </div>
+</div>
+
+ <!-- carousel videos  -->
+<div class="carusel vide">
+    <div class="carousel__contenedor">
+        <button class="carousel__anteriorv" aria-label="Previous slide"><span class="material-icons">
+            arrow_back_ios
+            </span></button>
+            <div class="carousel__listav" >
+                
+                        <div class="carousel__element" *ngFor="let video of videos" >
+                              <iframe width="560" height="315" src="{{video.url}}" 
+                              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                              allowfullscreen></iframe>
+                         </div>
+                 
+            </div>
+           <button class="carousel__siguientev" aria-label="Next slide"><span class="material-icons">
+            arrow_forward_ios
+            </span></button>
+    </div>
+</div> 
+
+
+
+<app-footer></app-footer>

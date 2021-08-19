@@ -1,0 +1,105 @@
+.cuers{
+	z-index: 2;
+}
+.carusel{
+	width: 100%;
+    margin: 0px auto;
+	padding: 2rem 0px;
+}
+.vide{
+	background: var(--violeta);
+}
+.carousel__contenedor {
+	position: relative;
+	width: 90%;
+	margin: 0px auto;
+}
+
+.carousel__anterior,
+.carousel__siguiente,
+.carousel__siguientev,
+.carousel__anteriorv {
+	position: absolute;
+	display: block;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: transparent;
+	color: rgba(0, 0, 0, 0.247);
+    font-size: 4rem;
+}
+.carousel__siguientev,
+.carousel__anteriorv{
+	color: rgba(255, 249, 249, 0.596);
+}
+.carousel__anterior span,
+.carousel__siguiente span,
+.carousel__siguientev span,
+.carousel__anteriorv  span{
+	font-size: 5rem;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover,
+.carousel__anteriorv:hover,
+.carousel__siguientev:hover {
+	opacity: 100%;
+}
+
+.carousel__anterior,.carousel__anteriorv {
+	left: -5px;
+	z-index: 2;
+}
+
+.carousel__siguiente,.carousel__siguientev {
+	right: -5px;
+}
+
+.carousel__lista,.carousel__listav {
+	overflow: hidden;
+}
+
+.carousel__element {
+	text-align: center;
+    margin: 0px 1rem;
+	height: 30vh;
+}
+.carousel__element img,
+.carousel__element video{
+	width: 100%;
+	height: 80%;
+	object-fit: contain;
+}
+.carousel__element figcaption{
+	height: 20%;
+	overflow: hidden;
+}
+.carousel__element a{
+	text-decoration: none;
+	color: var(--azul);
+	font-weight: 100px;
+}
+.vide .carousel__element a{
+	color: var(--blanco);
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+}
+
+
+@media screen and (max-width: 800px) {
+	body {
+		padding: 40px 0;
+	}
+
+	.contenido-principal {
+		flex-direction: column;
+	}
+
+	.contenido-principal > * {
+		width: 100%;
+	}
+}  
